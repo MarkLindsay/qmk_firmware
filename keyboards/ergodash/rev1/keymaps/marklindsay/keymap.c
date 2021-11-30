@@ -17,6 +17,7 @@ enum custom_keycodes {
   COLEMAK,
   EXPRMNT,
   TG_NMPD,
+  GUI_ENT,
   LOWER,
   RAISE,
   ADJUST
@@ -25,6 +26,8 @@ enum custom_keycodes {
 //#define CTL_ENT MT(MOD_RCTL, KC_PENT)
 //#define NUMPAD MO(_NUMPAD)
 #define TG_NMPD TG(_NUMPAD)
+#define GUI_ENT LGUI_T(KC_ENT)
+
 
 #define LAYOUT_wrapper(...) LAYOUT(__VA_ARGS__)
 #define LAYOUT_ergodox_base( \
@@ -37,7 +40,7 @@ enum custom_keycodes {
     KC_GRV,  K01,     K02,     K03,     K04,     K05,     KC_LBRC,                   KC_RBRC, K06,     K07,     K08,     K09,     K0A,     KC_BSLS, \
     KC_TAB,  K11,     K12,     K13,     K14,     K15,     KC_HOME,                   KC_DEL,  K16,     K17,     K18,     K19,     K1A,     K1B, \
     KC_LSFT, K21,     K22,     K23,     K24,     K25,     TG_NMPD,                   TG_NMPD, K26,     K27,     K28,     K29,     K2A,     KC_RSFT, \
-    KC_LGUI, KC_LCTL, KC_LALT, KC_ENT,  LCTL_T(KC_SPC),  LOWER,   KC_BSPC,                   KC_SPC,  RAISE,   KC_BSPC, KC_ENT,  KC_RALT, KC_RCTL, KC_RGUI  \
+    KC_LGUI, KC_LCTL, KC_LALT, KC_ENT,  GUI_ENT, LOWER,   KC_SPC,                   KC_BSPC,  RAISE,   KC_SPC, KC_ENT,  KC_RALT, KC_RCTL, KC_RGUI  \
   )
 #define LAYOUT_ergodox_base_wrapper(...) LAYOUT_ergodox_base(__VA_ARGS__)
 
@@ -92,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX, XXXXXXX, XXXXXXX, BL_STEP, BL_TOGG, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, RGB_TOG, RGB_MOD, XXXXXXX, XXXXXXX, XXXXXXX, \
     RESET,   XXXXXXX, XXXXXXX, BL_BRTG, BL_INC,  XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX, \
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, BL_DEC,  XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX, \
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LOWER,   XXXXXXX,                   XXXXXXX, RAISE,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  \
+    CG_SWAP, CG_NORM, XXXXXXX, XXXXXXX, XXXXXXX, LOWER,   XXXXXXX,                   XXXXXXX, RAISE,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  \
   )
 };
 
