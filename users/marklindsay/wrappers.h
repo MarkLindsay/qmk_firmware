@@ -14,8 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-//#pragma once
-//#include "drashna.h"
+#pragma once
+#include "marklindsay.h"
 /*
 Since our quirky block definitions are basically a list of comma separated
 arguments, we need a wrapper in order for these definitions to be
@@ -274,5 +274,9 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________ADJUST_R1_________________       KC_SEC1, KC_SEC2, KC_SEC3, KC_SEC4, KC_SEC5
 #define _________________ADJUST_R2_________________       CG_SWAP, DEFLYR1, DEFLYR2, DEFLYR3, DEFLYR4
 #define _________________ADJUST_R3_________________       MG_NKRO, KC_MUTE, KC_VOLD, KC_VOLU, KC_MNXT
+
+#define ________________TEN_KEY_TOP________________       _______, KC_KP_7, KC_KP_8, KC_KP_9, KC_PMNS
+#define ________________TEN_KEY_MID________________       KC_PDOT, KC_KP_4, KC_KP_5, KC_KP_6, KC_PPLS
+#define ________________TEN_KEY_BOT________________       KC_KP_0, KC_KP_1, KC_KP_2, KC_KP_3, KC_EQL
 
 // clang-format on
