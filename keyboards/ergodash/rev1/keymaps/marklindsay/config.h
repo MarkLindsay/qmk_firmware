@@ -34,3 +34,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // #define LEADER_PER_KEY_TIMING
 // #define LEADER_TIMEOUT 250
+
+
+#define TAPPING_TERM 200
+#define PERMISSIVE_HOLD
+//#define HOLD_ON_OTHER_KEY_PRESS

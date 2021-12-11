@@ -279,4 +279,57 @@ NOTE: These are all the same length.  If you do a search/replace
 #define ________________TEN_KEY_MID________________       KC_PDOT, KC_KP_4, KC_KP_5, KC_KP_6, KC_PPLS
 #define ________________TEN_KEY_BOT________________       KC_KP_0, KC_KP_1, KC_KP_2, KC_KP_3, KC_EQL
 
+
+
+
+//Siniply
+#define ________________SINIPLY_0_L1_______________       KC_Q,    KC_W,    KC_F,    KC_P,    KC_B
+#define ________________SINIPLY_0_L2_______________       KC_A,    KC_R,    KC_S,    KC_T,    KC_G
+#define ________________SINIPLY_0_L3_______________       KC_Z,    KC_X,    KC_C,    KC_D,    KC_V
+
+#define ________________SINIPLY_0_R1_______________       C_J,     KC_L,    KC_U,    KC_Y,    KC_QUOT
+#define ________________SINIPLY_0_R2_______________       C_M,     KC_N,    KC_E,    KC_I,    KC_O
+#define ________________SINIPLY_0_R3_______________       C_K,     KC_H,    KC_COMM, KC_DOT,  KC_SLSH
+
+
+#define ___________________SINIPLY_1_L0___________________         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5f
+#define ___________________SINIPLY_1_L1___________________         KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC
+#define ___________________SINIPLY_1_L2___________________         KC_SCLN, KC_COLN, KC_LCBR, KC_LPRN, KC_LBRC
+#define ___________________SINIPLY_1_L3___________________         KC_CIRC, KC_AMPR, KC_RCBR, KC_RPRN, KC_RBRC
+
+#define ___________________SINIPLY_1_R0___________________         KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_F11
+#define ___________________SINIPLY_1_R1___________________         KC_EQL,  KC_7,    KC_8,    KC_9,    KC_PLUS,  KC_F12
+#define ___________________SINIPLY_1_R2___________________         KC_ASTR, KC_4,    KC_5,    KC_6,    KC_MINS,  KC_PENT
+#define ___________________SINIPLY_1_R3___________________         KC_0,    KC_1,    KC_2,    KC_3,    KC_SLSH,  KC_NO
+
+
+
+#define ________________SINIPLY_2_L1_______________       KC_MUTE, KC_VOLD, KC_VOLU, KC_MPRV, KC_MNXT
+#define ________________SINIPLY_2_L2_______________       KC_GRV,  SFT_GRV, KC_NUHS, SFT_HSH, KC_MSTP
+#define ________________SINIPLY_2_L3_______________       KC_NUBS, SFT_BSL, KC_NO,   KC_MPLY, KC_MSTP
+
+#define ________________SINIPLY_2_R1_______________       KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
+#define ________________SINIPLY_2_R2_______________       KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_UNDS
+#define ________________SINIPLY_2_R3_______________       KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // clang-format on
