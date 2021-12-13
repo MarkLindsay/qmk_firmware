@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
+#define RGBLIGHT_LAYERS
 
 
 /* Use I2C or Serial, not both */
@@ -36,6 +37,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define LEADER_TIMEOUT 250
 
 
+#undef TAPPING_TERM
 #define TAPPING_TERM 200
-#define PERMISSIVE_HOLD
-//#define HOLD_ON_OTHER_KEY_PRESS
