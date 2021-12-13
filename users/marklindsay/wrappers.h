@@ -1,4 +1,4 @@
-/* Copyright 2020 Christopher Courtney, aka Drashna Jael're  (@drashna) <drashna@live.com>
+/* Copyright 2021 Mark Lindsay marklindsay@protonmail.com @marklindsay
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,21 +17,8 @@
 #pragma once
 #include "marklindsay.h"
 /*
-Since our quirky block definitions are basically a list of comma separated
-arguments, we need a wrapper in order for these definitions to be
-expanded before being used as arguments to the LAYOUT_xxx macro.
-*/
-
-/*
-Blocks for each of the four major keyboard layouts
-Organized so we can quickly adapt and modify all of them
-at once, rather than for each keyboard, one at a time.
-And this allows for much cleaner blocks in the keymaps.
-For instance Tap/Hold for Control on all of the layouts
-
-NOTE: These are all the same length.  If you do a search/replace
-  then you need to add/remove underscores to keep the
-  lengths consistent.
+I don't know what all this means.
+See https://github.com/qmk/qmk_firmware/blob/master/users/drashna/wrappers.h
 */
 // clang-format off
 #define _________________QWERTY_L1_________________       KC_Q,    KC_W,    KC_E,    KC_R,    KC_T

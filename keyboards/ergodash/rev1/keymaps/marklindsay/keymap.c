@@ -33,9 +33,9 @@ enum custom_keycodes {
     K21, K22, K23, K24, K25, K26, K27, K28, K29, K2A  \
   ) \
   LAYOUT_wrapper( \
-    KC_ESC,  ________________NUMBER_LEFT________________, KC_MINS,                   KC_EQL,  ________________NUMBER_RIGHT_______________, KC_EQL,  \
+    KC_ESC,  ________________NUMBER_LEFT________________, KC_RBRC,                   KC_EQL,  ________________NUMBER_RIGHT_______________, KC_EQL,  \
     KC_GRV,  K01,     K02,     K03,     K04,     K05,     KC_LBRC,                   KC_RBRC, K06,     K07,     K08,     K09,     K0A,     KC_BSLS, \
-    KC_TAB,  K11,     K12,     K13,     K14,     K15,     KC_HOME,                   KC_BSPC, K16,     K17,     K18,     K19,     K1A,     K1B,     \
+    KC_TAB,  K11,     K12,     K13,     K14,     K15,     KC_SLCK,                   KC_BSPC, K16,     K17,     K18,     K19,     K1A,     K1B,     \
     KC_LSFT, K21,     K22,     K23,     K24,     K25,     TG_NMPD,                   TG_NMPD, K26,     K27,     K28,     K29,     K2A,     KC_ENT,  \
     KC_LGUI, KC_LCTL, KC_LALT, KC_ENT,  GUI_ENT, KC_SPC,  LOWER,                     RAISE,   KC_SPC,  GUI_ENT, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
   )
