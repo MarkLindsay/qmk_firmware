@@ -262,7 +262,7 @@ See https://github.com/qmk/qmk_firmware/blob/master/users/drashna/wrappers.h
 #define _________________ADJUST_R2_________________       CG_SWAP, DEFLYR1, DEFLYR2, DEFLYR3, DEFLYR4
 #define _________________ADJUST_R3_________________       MG_NKRO, KC_MUTE, KC_VOLD, KC_VOLU, KC_MNXT
 
-#define ________________TEN_KEY_TOP________________       _______, KC_KP_7, KC_KP_8, KC_KP_9, KC_PMNS
+#define ________________TEN_KEY_TOP________________       KC_PAST, KC_KP_7, KC_KP_8, KC_KP_9, KC_PMNS
 #define ________________TEN_KEY_MID________________       KC_PDOT, KC_KP_4, KC_KP_5, KC_KP_6, KC_PPLS
 #define ________________TEN_KEY_BOT________________       KC_KP_0, KC_KP_1, KC_KP_2, KC_KP_3, KC_EQL
 
