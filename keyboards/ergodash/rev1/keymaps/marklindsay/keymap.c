@@ -4,7 +4,8 @@
 enum layers {
     _QWERTY,
     _COLEMAK,
-    _EXPRMNT,
+    _BORDER,
+    _SYMBOLS,
     _NUMPAD,
     _LOWER,
     _RAISE,
@@ -22,11 +23,21 @@ enum custom_keycodes {
 };
 
 /* Abreviations */
+#define TG_ADJS TG(_ADJUST)
 #define TG_NMPD TG(_NUMPAD)
-#define GUI_ENT LGUI_T(KC_ENT)
+#define TG_BRDR TG(_BORDER)
+#define TG_SYMB TG(_SYMBOLS)
+#define SYM_ENT LT(_SYMBOLS, KC_ENT)
+#define LWR_BSP LT(_LOWER, KC_BSPC)
+#define RAS_BSP LT(_RAISE, KC_BSPC)
+#define GUI_ENT GUI_T(KC_ENT)
+#define SFT_SPC SFT_T(KC_SPC)
+#define ALT_SPC ALT_T(KC_SPC)
+#define ALT_ENT ALT_T(KC_ENT)
+#define SFT_ENT SFT_T(KC_ENT)
+//#define TAP_NUM MT(TG(_NUMPAD), OSL(_NUMPAD))
 //#define LOWR_F2 LT(LOWER, KC_F2)  //not how this works
 //#define RAIS_F2 LT(RAISE, KC_BSPC)  //not how this works
-
 
 #define LAYOUT_wrapper(...) LAYOUT(__VA_ARGS__)
 #define LAYOUT_ergodox_base( \
@@ -38,8 +49,8 @@ enum custom_keycodes {
     KC_ESC,  ________________NUMBER_LEFT________________, KC_RBRC,                   KC_EQL,  ________________NUMBER_RIGHT_______________, KC_EQL,  \
     KC_GRV,  K01,     K02,     K03,     K04,     K05,     KC_LBRC,                   KC_MINS, K06,     K07,     K08,     K09,     K0A,     KC_BSLS, \
     KC_TAB,  K11,     K12,     K13,     K14,     K15,     KC_SLCK,                   KC_BSPC, K16,     K17,     K18,     K19,     K1A,     K1B,     \
-    KC_LSFT, K21,     K22,     K23,     K24,     K25,     TG_NMPD,                   TG_NMPD, K26,     K27,     K28,     K29,     K2A,     KC_ENT,  \
-    KC_LGUI, KC_LCTL, KC_LALT, KC_ENT,  GUI_ENT, KC_SPC,  LOWER,                     RAISE,   KC_SPC,  GUI_ENT, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
+    KC_LSFT, K21,     K22,     K23,     K24,     K25,     TG_NMPD,                   TG_BRDR, K26,     K27,     K28,     K29,     K2A,     KC_ENT,  \
+    KC_LGUI, KC_LCTL, KC_LALT, KC_ENT,  GUI_ENT, ALT_SPC, LWR_BSP,                   RAS_BSP, SFT_SPC, SYM_ENT, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
   )
 #define LAYOUT_ergodox_base_wrapper(...) LAYOUT_ergodox_base(__VA_ARGS__)
 
@@ -57,6 +68,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _________________COLEMAK_L3________________, _________________COLEMAK_R3________________
   ),
 
+  [_BORDER] = LAYOUT_wrapper( \
+    _______, _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, _______,\
+    _______, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, _______,                   _______, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, _______,\
+    _______, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, _______,                   _______, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,\
+    _______, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, _______,                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, _______,\
+    _______, _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, _______ \
+  ),
+
+  [_SYMBOLS] = LAYOUT_wrapper( \
+    _______, _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, _______,\
+    _______, _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, _______,\
+    _______, _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, _______,\
+    _______, _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, _______,\
+    _______, _______, _______, _______, KC_TRNS, _______, _______,                   _______, _______, _______, _______, _______, _______, _______ \
+  ),
+
   [_NUMPAD] = LAYOUT_wrapper( \
     _______, _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, _______,\
     _______, KC_PAST, KC_7,    KC_8,    KC_9,    KC_PMNS, _______,                   _______, ________________TEN_KEY_TOP________________, _______,\
@@ -69,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, _______,\
     _______, _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, _______,\
     _______, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,                   _______, _______, _______, _______, _______, _______, _______,\
-    KC_CAPS, _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, _______,\
+    KC_CAPS, _______, _______, _______, _______, _______, TG_ADJS,                   _______, _______, _______, _______, _______, _______, _______,\
     _______, _______, _______, _______, _______, _______, KC_TRNS,                   _______, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END  \
   ),
 
@@ -85,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     QWERTY,  COLEMAK, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   RGB_M_P, RGB_MOD, RGB_RMOD,XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   RGB_M_K, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
     RESET,   EEP_RST, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   RGB_M_X, RGB_M_T, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX, XXXXXXX,\
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, RGB_TOG, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX,\
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,                   XXXXXXX, RGB_TOG, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX, XXXXXXX,\
     CG_SWAP, CG_NORM, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TRNS,                   KC_TRNS, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD, KC_VOLU, XXXXXXX \
   )
 };
@@ -104,34 +131,34 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
-    case LOWER:
-      if (record->event.pressed) {
-        layer_on(_LOWER);
-        update_tri_layer(_LOWER, _RAISE, _ADJUST);
-      } else {
-        layer_off(_LOWER);
-        update_tri_layer(_LOWER, _RAISE, _ADJUST);
-      }
-      return false;
-      break;
-    case RAISE:
-      if (record->event.pressed) {
-        layer_on(_RAISE);
-        update_tri_layer(_LOWER, _RAISE, _ADJUST);
-      } else {
-        layer_off(_RAISE);
-        update_tri_layer(_LOWER, _RAISE, _ADJUST);
-      }
-      return false;
-      break;
-    case ADJUST:
-      if (record->event.pressed) {
-        layer_on(_ADJUST);
-      } else {
-        layer_off(_ADJUST);
-      }
-      return false;
-      break;
+    //case LOWER:
+    //  if (record->event.pressed) {
+    //    layer_on(_LOWER);
+    //    update_tri_layer(_LOWER, _RAISE, _ADJUST);
+    //  } else {
+    //    layer_off(_LOWER);
+    //    update_tri_layer(_LOWER, _RAISE, _ADJUST);
+    //  }
+    //  return false;
+    //  break;
+    //case RAISE:
+    //  if (record->event.pressed) {
+    //    layer_on(_RAISE);
+    //    update_tri_layer(_LOWER, _RAISE, _ADJUST);
+    //  } else {
+    //    layer_off(_RAISE);
+    //    update_tri_layer(_LOWER, _RAISE, _ADJUST);
+    //  }
+    //  return false;
+    //  break;
+    //case ADJUST:
+    //  if (record->event.pressed) {
+    //    layer_on(_ADJUST);
+    //  } else {
+    //    layer_off(_ADJUST);
+    //  }
+    //  return false;
+    //  break;
   }
   return true;
 }
@@ -193,4 +220,3 @@ bool led_update_user(led_t led_state) {
 	rgblight_set();
 	return true;
 }
-
