@@ -233,6 +233,7 @@ See https://github.com/qmk/qmk_firmware/blob/master/users/drashna/wrappers.h
 
 #define ___________________BLANK___________________       _______, _______, _______, _______, _______
 
+#define ______________ARROWS______________                KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
 
 #define _________________LOWER_L1__________________       KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC
 #define _________________LOWER_L2__________________       _________________FUNC_LEFT_________________

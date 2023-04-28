@@ -27,5 +27,6 @@
     "[json]": {
 	    "editor.formatOnSave": false
     },
-    "editor.parameterHints.enabled": false
+    "editor.parameterHints.enabled": false,
+    "cmake.configureOnOpen": false
 }
