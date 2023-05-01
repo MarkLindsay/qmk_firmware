@@ -36,7 +36,7 @@ enum custom_keycodes {
 #define TAP_LOW TT(_LOWER)
 //#define LOWR_F2 LT(LOWER, KC_F2)  //not how this works
 //#define RAIS_F2 LT(RAISE, KC_BSPC)  //not how this works
-#define MEH__F2 MT(MOD_LGUI | MOD_LALT | MOD_LSFT, KC_F2)
+#define MEH__F2 MT(MOD_LCTL | MOD_LALT | MOD_LSFT, KC_F2)
 
 #define LAYOUT_wrapper(...) LAYOUT(__VA_ARGS__)
 #define LAYOUT_ergodox_base( \
@@ -84,10 +84,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_ADJUST] = LAYOUT_wrapper( \
-    QWERTY,  COLEMAK, _______, _______, _______, _______, _______,                   RGB_M_P, RGB_MOD, RGB_RMOD,_______, _______, _______, _______,\
-    _______, _______, _______, _______, _______, _______, _______,                   RGB_M_K, _______, _______, _______, _______, _______, _______,\
-    RESET,   EEP_RST, _______, _______, _______, _______, _______,                   RGB_M_X, RGB_M_T, RGB_HUI, RGB_SAI, RGB_VAI, _______, _______,\
-    _______, _______, _______, _______, _______, _______, KC_TRNS,                   KC_TRNS, RGB_TOG, RGB_HUD, RGB_SAD, RGB_VAD, _______, _______,\
+    _______, QWERTY,  COLEMAK, _______, _______, _______, RESET,                     RGB_TOG, RGB_M_P, RGB_M_T, RGB_MOD, RGB_RMOD,_______, _______,\
+    _______, _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, _______,\
+    _______, EEP_RST, _______, _______, _______, _______, _______,                   _______, _______, RGB_HUI, RGB_SAI, RGB_VAI, _______, _______,\
+    _______, _______, _______, _______, _______, _______, KC_TRNS,                   KC_TRNS, _______, RGB_HUD, RGB_SAD, RGB_VAD, _______, _______,\
     CG_SWAP, CG_NORM, _______, KC_TRNS, _______, _______, _______,                   _______, _______, KC_TRNS, _______, _______, _______, _______ \
   )
 };
